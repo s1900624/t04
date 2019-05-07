@@ -1,12 +1,12 @@
 {
-  "name": "t04",
+  "name": "reaktiopeli",
   "version": "1.0.0",
-  "description": "<img src=\"media/5e7a8461c064adb51984e7e962530b49.jpg\" width=400px>",
-  "main": "reaktio.js",
+  "description": "Reaktio Game",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "forever -l forever.log -o out.log -e err.log -c 'node --expose-gc' server.js"
   },
-  "author": "",
+  "author": "s1900624, toivo",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
