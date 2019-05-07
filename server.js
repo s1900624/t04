@@ -41,6 +41,7 @@ io.on('connection', (socket) =>{
   		console.log('Add new user: ', data.loginname);
   		userInit(data);
   		console.log(users);
+      socket.user_id = data.loginname;
   		socket.emit('login-successful', { loginsuccessful: JSON.stringify(Array.from(users.entries())), loginname: data.loginname } ); 
   		socket.broadcast.emit('new-user', JSON.stringify(users.get(data.loginname)));
   	} else {
@@ -76,6 +77,12 @@ io.on('connection', (socket) =>{
     	// io.emit('results-users', JSON.stringify(users.get(obj.LoginName)) );
     	io.emit('check-users', JSON.stringify(Array.from(users.entries())) );
     }
+  });
+
+  socket.on('disconnect', () => {
+    users.delete(socket.user_id);
+    io.emit('check-users', JSON.stringify(Array.from(users.entries())) );
+    console.log('User disconnected', socket.user_id);
   });
 
   setInterval(gameOverUsers, 10000);
