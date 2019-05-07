@@ -90,7 +90,7 @@ function setTulosResults() {
 
 function continueGame() {
   clearTimeout(ajastin);
-  time = time >= 300 ? time - 300 : time;
+  time = time >= 500 ? time - 200 : time;
   speed.innerText = (time / 1000) + ' seconds';
   ajastin = setTimeout(aktivoiSeuraava, time, time);    
 }

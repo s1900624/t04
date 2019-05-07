@@ -23,17 +23,17 @@ io.on('connection', (socket) =>{
 
   function gameOverUsers() {
   	let countStart = users.size;
-	users.forEach( (value, key, map) => {
-	  // console.log(`${value.Status}`);
-	  if (`${value.Status}` === 'Game over') {
-	  	users.delete(key);
-	  }
-	});
-	let countEnd = users.size;
+  	users.forEach( (value, key, map) => {
+  	  // console.log(`${value.Status}`);
+  	  if (`${value.Status}` === 'Game over') {
+  	  	users.delete(key);
+  	  }
+  	});
+  	let countEnd = users.size;
 
-	if (countStart !== countEnd) {
-		io.emit('check-users', JSON.stringify(Array.from(users.entries())) );
-	}
+  	if (countStart !== countEnd) {
+  		io.emit('check-users', JSON.stringify(Array.from(users.entries())) );
+  	}
   }
 
   socket.on('loginname', (data) => {
@@ -79,7 +79,6 @@ io.on('connection', (socket) =>{
   });
 
   setInterval(gameOverUsers, 10000);
-
 });
 
 let server = httpServer.listen(app.get('port'), err => {
