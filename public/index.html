@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Reaktiopeli</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div id="tulos-container">
+            Tulos: <span id="tulos">0</span><br>
+            Attemps: <span id="attemps">3</span><br>
+            Speed: <span id="speed"></span><br>
+            Play as: <span id="account"></span>
+        </div>
+        <div id="nappula-container">
+            <div class="nappula" id="nappula0">H</div>
+            <div class="nappula" id="nappula1">B</div>
+            <div class="nappula" id="nappula2">C</div>
+            <div class="nappula" id="nappula3">A</div>
+        </div>
+
+        <ol id="users">
+            
+        </ol>
+
+        <div id="overlay">
+          <div id="gameover">
+            <span>Game over</span>
+            <!--<button id="try-again">Try again.</button>-->
+          </div>
+        </div>
+
+        <div id="overlay-login">
+          <div id="login">
+            <span>Enter name</span>
+            <input type="text" id="loginname" name="" value=""/>
+            <button id="loginsubmit">Go-go-go! Sector clear!</button>
+          </div>
+        </div>        
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" type="text/javascript" charset="utf-8"></script>
+    <script src="reaktio.js"></script>   
+</body>
+
+</html>

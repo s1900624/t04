@@ -1,0 +1,17 @@
+{
+  "name": "t04",
+  "version": "1.0.0",
+  "description": "<img src=\"media/5e7a8461c064adb51984e7e962530b49.jpg\" width=400px>",
+  "main": "reaktio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "socket.io": "^2.2.0"
+  }
+}

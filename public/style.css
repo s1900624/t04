@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: "Open Sans", sans-serif;*/
+  font-family: Consolas, sans-serif;
+}
+
+#loginname {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  width: 50%;
+  outline:none;
+}
+
+#loginsubmit {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 3em calc(.8em + 0px);
+  border-radius: 3px;
+  background: black;
+  transition: 0.2s;
+} 
+#loginsubmit:hover { background: grey; }
+#loginsubmit:active {
+  background: black;
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+#tulos-container {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px 20px;
+}
+
+#nappula-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nappula {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  color: white;
+  float: left;
+  font-size: 200px;
+  margin: 15px 15px;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#overlay, #overlay-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+#gameover, #login {
+  background-color: white;
+  width: 40%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  color: blue;
+  flex-direction: column;
+}
+
+.you {
+  color: green;
+  font-weight: bold;
+}
+
+.game-over {
+  color: red;
+}
