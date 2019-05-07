@@ -11,9 +11,8 @@ pelin. Nappuloiden vaihtumisnopeus kiihtyy jatkuvasti.
 ## Start single game
 
 ## Start multiplay game
-1.  Pitää asettaa     ```javascript NodeJS```.
+1.  Pitää asettaa ```NodeJS```.
 
-2.  Tee funktio `yhdestaJohonkin`, joka tulostaa kokonaisluvut 1:stä parametrina annettuun lukuun
-    asti _(esimerkissä: 12)_.
+<a href="https://nodejs.org/en/" target="_blank">NodeJS</a>
 
 ## Start multiplay game with Docker
