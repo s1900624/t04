@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "forever -l forever.log -o out.log -e err.log -c 'node --expose-gc' server.js",
-    "lint": "eslint index.js --fix"
+    "lint": "eslint server.js --fix"
   },
   "author": "s1900624, toivo",
   "license": "ISC",
