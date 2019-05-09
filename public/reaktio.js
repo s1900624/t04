@@ -19,6 +19,7 @@ let loginSubmit = document.getElementById('loginsubmit');
 let loginName = document.getElementById('loginname');
 let usersOl = document.getElementById('users');
 let account = document.getElementById('account');
+let gameOverTulos = document.getElementById('game-over-tulos');
 
 // onclick-käsittelyjät kaikille nappuloille
 nappulat[0].onclick = function() { painallus(0) };
@@ -66,7 +67,8 @@ function aktivoiSeuraava(aika) {
     // Tämä on vain demotarkoituksessa näin!
     // Koodaa tämä niin, että seuraava arvotaan. Muista, että sama ei saa
     // tulla kahta kertaa peräkkäin.
-    var uusi = (edellinen + 1) % nappulat.length;
+    let randNumeber = getRandomInt(0, nappulat.length - 1);
+    let uusi = (edellinen + randNumeber) % nappulat.length;
     return uusi;
   }
 }
@@ -102,6 +104,7 @@ function attempPois() {
 
 function stopGame() {
   lopetaPeli();
+  gameOverTulos.innerText = tulos;
   overlay.style.visibility = "visible";   
 }
 

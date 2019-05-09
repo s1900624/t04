@@ -12,6 +12,7 @@ let tulosResults = document.getElementById('tulos');
 let speed = document.getElementById('speed');
 let attemps = document.getElementById('attemps');
 let overlay = document.getElementById('overlay');
+let gameOverTulos = document.getElementById('game-over-tulos');
 
 // onclick-käsittelyjät kaikille nappuloille
 nappulat[0].onclick = function() { painallus(0) };
@@ -55,7 +56,8 @@ function aktivoiSeuraava(aika) {
     // Tämä on vain demotarkoituksessa näin!
     // Koodaa tämä niin, että seuraava arvotaan. Muista, että sama ei saa
     // tulla kahta kertaa peräkkäin.
-    var uusi = (edellinen + 1) % nappulat.length;
+    let randNumeber = getRandomInt(0, nappulat.length - 1);
+    let uusi = (edellinen + randNumeber) % nappulat.length;
     return uusi;
   }
 }
@@ -79,6 +81,7 @@ function painallus(i) {
     attemps.innerText = attempsCount;
     if (attempsCount === 0) {
       lopetaPeli();
+      gameOverTulos.innerText = tulos;
       overlay.style.visibility = "visible";
     } 
   }
