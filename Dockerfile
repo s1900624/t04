@@ -1,15 +1,14 @@
 FROM node:carbon
 
-# Create app directory
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
+# Install software 
+RUN apt-get install -y git
 RUN npm install forever -g
+VOLUME /reaktiopeli
 
-# Bundle app source
-COPY . .
+RUN git clone https://github.com/s1900624/t04.git /reaktiopeli/
+
+# Create app directory
+WORKDIR /reaktiopeli
 
 EXPOSE 80
-CMD [ "npm", "start" ]
+CMD git pull origin master && npm install -y && npm start
