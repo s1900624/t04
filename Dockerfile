@@ -10,5 +10,5 @@ RUN git clone https://github.com/s1900624/t04.git /reaktiopeli/
 # Create app directory
 WORKDIR /reaktiopeli
 
-EXPOSE 80
+EXPOSE 3000
 CMD git pull origin master && npm install -y && npm start
