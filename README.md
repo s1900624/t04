@@ -34,6 +34,8 @@ Jos Sinä haluat, Sinä voit aloittaa pelin käyttämällä Dokeri:lla.
 
 Ensinnäkin pitää asettaa Docker:a
 
+Sitten pull image käytävä from hub.docker.com ja ohje:
+
 1. Linux / iOS: sudo docker pull s1900624/reaktiopeli_local
 
    Windows: docker pull s1900624/reaktiopeli
@@ -41,7 +43,15 @@ Ensinnäkin pitää asettaa Docker:a
 2. Linux / iOS: sudo docker run -d -p 3000:3000 --name reaktiopeli s1900624/reaktiopeli_local:latest
     
    Windows: docker run -d -p 3000:3000 --name reaktiopeli s1900624/reaktiopeli_local:latest
+   
+   `-d` tarkoitaa taustamuoto
+   
+   `-p` tarkoitaa ports (Dokerissa:Dorekista)
+   
+   `--name` tarkoitaa alias of container 
+   
     
+Reaktiopeli avaataan linkilla: 192.168.99.100:3000
 
 P.S. 
 This application could and do not use Docker because for this task Docker does not use all own opportunities. 
